@@ -1,0 +1,13 @@
+<div>
+    <h3>Top headlines</h3>
+    
+    <div>
+        <div *ngFor="let headlines of topHeadlinesResult">
+            <img src="{{ headlines.urlToImage }}" style="width: 150px; height: 100px; margin:10px;" alt="thumbnail">
+            <a href="{{ headlines.url }}" style="color: black; text-decoration:none; margin: 10px;">{{ headlines.title }}</a>
+            <br><hr>
+        </div>
+    </div>
+</div>
+
+
