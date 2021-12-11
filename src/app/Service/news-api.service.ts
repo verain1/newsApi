@@ -10,14 +10,14 @@ export class NewsApiService {
 
   constructor(private http: HttpClient) { }
 
-  topHeadlinesApiUrl = "https://newsapi.org/v2/top-headlines?country=in&apiKey=463990f4ce614944895c5f2a98e11260";
-  topHeadlines():Observable<any>{
-    return this.http.get(this.topHeadlinesApiUrl);
+  topHeadlinesApiUrl = "https://newsapi.org/v2/top-headlines?country=in&category=technology&apiKey=463990f4ce614944895c5f2a98e11260";
+  topHeadlines(value:any):Observable<any>{
+    return this.http.get('https://newsapi.org/v2/top-headlines?country=in&category=' + value + '&apiKey=463990f4ce614944895c5f2a98e11260');
   }
 
   topTechnologyApiUrl = "https://newsapi.org/v2/top-headlines?country=in&category=technology&apiKey=463990f4ce614944895c5f2a98e11260";
   topTechnology():Observable<any>{
-    return this.http.get(this.topTechnologyApiUrl);
+    return this.http.get<any>(this.topTechnologyApiUrl);
   }
 
   weatherApiUrl = "http://api.weatherstack.com/current?access_key=9b1119a5eec3bff57394874a08546e8c&query=Jalandhar";

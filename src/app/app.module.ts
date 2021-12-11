@@ -10,6 +10,8 @@ import { NewsApiService } from './Service/news-api.service';
 import { HttpClientModule } from '@angular/common/http';
 import { WeatherComponent } from './weather/weather.component';
 
+import { FormsModule } from '@angular/forms'; 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +22,8 @@ import { WeatherComponent } from './weather/weather.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

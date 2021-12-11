@@ -1,5 +1,20 @@
 <div>
     <h3>Top headlines</h3>
+
+    <div>
+        <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
+            <div>
+                <label for="cars" >Choose a category:</label>
+                <select id="category" name="name" ngModel>
+                <option value="entertainment">Entertainment</option>
+                <option value="sports">Sports</option>
+                <option value="general">General</option>
+                <option value="health">Health</option>
+                </select>
+                <button type="submit" >Submit</button>
+            </div>
+        </form>
+    </div>
     
     <div>
         <div *ngFor="let headlines of topHeadlinesResult">
