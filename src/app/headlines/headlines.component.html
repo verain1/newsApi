@@ -1,7 +1,7 @@
 <div>
     <h3>Top headlines</h3>
 
-    <div>
+    <div style="position: absolute; top: 10%; right: 40%;">
         <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
             <div>
                 <label for="cars" >Choose a category:</label>
@@ -10,6 +10,8 @@
                 <option value="sports">Sports</option>
                 <option value="general">General</option>
                 <option value="health">Health</option>
+                <option value="business">Business</option>
+                <option value="science">Science</option>
                 </select>
                 <button type="submit" >Submit</button>
             </div>
